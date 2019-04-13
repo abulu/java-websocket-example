@@ -25,7 +25,7 @@ public class MyWebSocket {
         System.out.println("onMessage::From=" + session.getId() + " Message=" + message);
         
         try {
-            session.getBasicRemote().sendText("Hello Client " + session.getId() + "!");
+            session.getBasicRemote().sendText("Hello Client " + session.getId() + ", Message=" + message);
         } catch (IOException e) {
             e.printStackTrace();
         }
